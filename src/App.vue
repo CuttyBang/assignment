@@ -1,28 +1,57 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TopBar/>
+    <NavBar/>
+    <Hero/>
+    <LogoBar/>
+    <Noteworthy/>
+    <Featured/>
+    <Explore/>
+    <About/>
+    <Testimonials/>
+    <Blogs/>
+    <Instagram/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopBar from './components/layout/TopBar.vue'
+import NavBar from './components/layout/NavBar.vue'
+import Hero from './components/layout/Hero.vue'
+import LogoBar from './components/layout/LogoBar.vue'
+import Noteworthy from './components/layout/Noteworthy.vue'
+import Featured from './components/layout/Featured.vue'
+import Explore from './components/layout/Explore.vue'
+import About from './components/layout/About.vue'
+import Testimonials from './components/layout/Testimonials.vue'
+import Blogs from './components/layout/Blogs.vue'
+import Instagram from './components/layout/Instagram.vue'
+import Footer from './components/layout/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TopBar,
+    NavBar,
+    Hero,
+    LogoBar,
+    Noteworthy,
+    Featured,
+    Explore,
+    About,
+    Testimonials,
+    Blogs,
+    Instagram,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 375px;
 }
 </style>
