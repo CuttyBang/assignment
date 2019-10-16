@@ -1,9 +1,10 @@
 <template lang="html">
   <div class="testimonial">
-    <Carousel />
-    <TextBlock :textContent="text" class="testimonial__text h2"/>
-    <TextBlock :textContent="testiName" class="testimonial__name"/>
-
+    <div class="testimonial__content">
+      <Carousel class="testimonial__carousel"/>
+      <TextBlock :textContent="text" class="testimonial__text h2"/>
+      <TextBlock :textContent="testiName" class="testimonial__name"/>
+    </div>
   </div>
 </template>
 
@@ -28,6 +29,11 @@ export default {
 
 <style lang="scss" scoped>
 .testimonial {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.testimonial__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,9 +45,8 @@ export default {
   color: $brown;
   width: 80%;
   text-align: center;
+  font-weight: 400;
 }
 
-.testimonial__text {
-  font-weight: 100;
-}
+
 </style>

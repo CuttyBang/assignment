@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="blogs">
     <BlogsHeading :headingContent="heading" class="blogs__heading"/>
-    <BlogPost v-for="(blog, index) in blogPosts" :topic="blog.topic" :title="blog.title" :image="blog.image" :key="index"/>
-    <div class="blogs__buttonBar">
+    <BlogPost v-for="(blog, index) in blogPosts" :topic="blog.topic" :title="blog.title" :image="blog.image" :key="index" class="blogs__post"/>
+    <div class="blogs__buttonBlock">
       <BlogsButton :buttonText="btnText" buttonClass="btnMd secondary" class="blogs__button"/>
     </div>
   </div>
@@ -41,11 +41,21 @@ export default {
   padding-top: 25px;
 }
 
-.blogs__buttonBar {
+.blogs__heading {
+  color: $brown;
+  font-weight: 400;
+}
+
+.blogs__buttonBlock {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.blogs__post {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .blogs__button {

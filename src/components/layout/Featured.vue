@@ -68,7 +68,9 @@ export default {
 }
 
 .featured__text,
-.featured__header {
+.featured__header,
+.featured__brandName,
+.featured__carouselHeading {
   color: $brown;
   width: 80%;
   text-align: center;
@@ -76,7 +78,7 @@ export default {
 }
 
 .featured__header {
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -86,12 +88,12 @@ export default {
   border-top: 1px solid $brown;
   padding: 20px 0;
   text-align: center;
+
 }
 
 .featured__brandName {
   margin: 0 auto;
   font-size: 20px;
-  font-weight: 100;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 80%;
@@ -99,9 +101,8 @@ export default {
 }
 
 .featured__carouselHeading {
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
-  color: $brown;
   margin-top: 20px;
   margin-bottom: 20px;
 }

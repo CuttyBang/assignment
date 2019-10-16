@@ -1,10 +1,12 @@
 <template lang="html">
   <div class="blogPost">
     <BlogImg :imgUrl="image"/>
-    <BlogText :textContent="topic" class="blogPost__text--topic"/>
-    <BlogHeading :headingContent="title" class="blogPost__title h3"/>
-    <div class="blogPost__text--link">
-      <a>Read More</a>
+    <div class="blogPost__content">
+      <BlogText :textContent="topic" class="blogPost__text--topic"/>
+      <BlogHeading :headingContent="title" class="blogPost__text--title h3"/>
+      <div class="blogPost__text--link">
+        <a class="blogPost__text--linkText">Read More</a>
+      </div>
     </div>
   </div>
 </template>
@@ -35,31 +37,31 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  text-align: center;
+
   @include for-desktop-up {
     flex-direction: row;
     width: 50%;
   }
-}
-.blogPost__text {
-  text-align: center;
-}
+  &__content {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__text--title, &__text--topic {
+    color: $brown;
+  }
 
-.blogPost__text__topic {
-
-}
-
-.blogPost__text--link {
-  margin-bottom: 52px;
-  a {
+  &__text--topic {
+    font-weight: 100;
+  }
+  &__text--link {
+    margin-top: 50px;
+    margin-bottom: 52px;
+  }
+  &__text--linkText {
     line-height: 1.5;
     border-bottom: 1px solid $green;
     color: $green;
   }
-}
-
-.blogPost__title,
-.blogPost__text__topic {
-  color: $brown;
 }
 </style>

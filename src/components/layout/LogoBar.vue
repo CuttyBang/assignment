@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="logobar">
-    <Headline :headingContent="headlineText" :size="small" class="logobar__heading"/>
+    <Headline :headingContent="headlineText" :size="headlineType" class="logobar__heading"/>
     <!-- <Logo v-for="(logo, index) in logos" :imgSrc="logo" :key="index" class="logobar__logo"/> -->
     <div class="logobar__logos">
       <img class="logobar__logo" src="../../assets/_nytimes2.png" alt="">
@@ -20,6 +20,7 @@ export default {
   },
   data() {
     return {
+      headlineType: 'small',
       logos: ['../../assets/nytimes.png', '../../assets/allure.png', '../../assets/goop.png', '../../assets/wallpaper.png'],
       headlineText: 'As Seen In'
     }

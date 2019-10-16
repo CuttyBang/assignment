@@ -100,7 +100,7 @@ export default {
     background: url('../../assets/hero_mobile.jpg');
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,7 @@ export default {
      margin: 0 auto;
 
     .hero__textBlock {
-       margin-bottom: 20px; 
+       margin-bottom: 20px;
     }
 
     .hero__text {

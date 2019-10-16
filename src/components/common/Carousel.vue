@@ -19,7 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .carousel {
-  height: 335px;
   width: 100%;
   img {
     margin: auto;

@@ -40,7 +40,7 @@ export default {
 }
 
 .explore__heading {
-  font-weight: 100;
+  font-weight: 400;
   color: $brown;
   text-align: center;
   margin-bottom: 10px;
