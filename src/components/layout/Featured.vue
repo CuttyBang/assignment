@@ -103,6 +103,7 @@ export default {
   .featured__image {
     margin: 0 auto;
     width: 100%;
+    height: 250px;
     max-width: 600px;
     display: block;
   }
@@ -118,6 +119,7 @@ export default {
   .featured__carouselHeading {
     color: $brown;
     width: 80%;
+
     text-align: center;
     margin: 0 auto;
   }
@@ -191,8 +193,8 @@ export default {
   }
 
   .featured__image {
-    height: 100%;
     width: 100%;
+    height: 473px;
     max-height: 473px;
     margin-top: 5px;
   }

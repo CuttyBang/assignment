@@ -102,14 +102,14 @@ export default {
 }
 
 .about__desktopLayout {
-  .about__image {
     width: 100%;
-    height: 100%;
-  }
+    height: auto;
+
 
   .about__inlineImage {
-    width: auto;
-    height: 596px
+    width: 50%;
+    height: auto;
+
   }
 
   .about__content {

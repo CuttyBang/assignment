@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="blogPost">
-    <BlogImg :imgUrl="image"/>
+    <BlogImg :imgHeight="imgHeight" class="blogPost__image"/>
     <div class="blogPost__content">
       <BlogText :textContent="topic" class="blogPost__text--topic"/>
       <BlogHeading :headingContent="title" class="blogPost__text--title h3"/>
@@ -26,6 +26,7 @@ export default {
   },
   data() {
     return {
+      imgHeight: 215
     }
   }
 }
@@ -49,6 +50,14 @@ export default {
       margin: 0;
       text-align: left;
       padding: 0;
+    }
+  }
+  .siteImage {
+    width: 100%;
+    height: 215px;
+    @include for-tablet-landscape-up {
+      width: 100%;
+      height: 351px;
     }
   }
 
