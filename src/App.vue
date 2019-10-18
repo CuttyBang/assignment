@@ -57,5 +57,6 @@ export default {
   max-width: 1400px;
   min-width: 375px;
   margin: 0 auto;
+  border: 1px solid #eee;
 }
 </style>
