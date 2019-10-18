@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="carousel">
-    <img src="https://via.placeholder.com/250x250" alt="">
+    <img src="https://via.placeholder.com/190x190" alt="">
     <p class="plarge carousel__text">Slide Title</p>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .carousel {
-  width: 100%;
+  width: auto;
   img {
     margin: auto;
     display: block;

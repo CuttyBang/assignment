@@ -1,18 +1,37 @@
 <template lang="html">
   <div class="about">
-    <!-- <AboutImage class="about__image--headerImage"/> -->
-    <div style="display: flex; justify-content: center; align-items: center"  class="inlineImage">
-      <img style="width: 100%;" src="https://via.placeholder.com/250x250" alt="">
-    </div>
-    <div class="about__content">
-      <div class="about__content--textContent">
-        <Heading :headingContent="heading" :size="headingSize" class="about__heading" />
-        <TextBlock  :textContent="text" class="about__text"/>
+    <div class="about__mobileLayout">
+      <!-- <AboutImage class="about__image--headerImage"/> -->
+      <div style="display: flex; justify-content: center; align-items: center"  class="inlineImage">
+        <img style="width: 100%;" src="https://via.placeholder.com/250x250" alt="">
       </div>
-      <div class="about__content--btnBlock">
-        <AboutButton :buttonText="button" class="about__button btn secondary"/>
+      <div class="about__content">
+        <div class="about__content--textContent">
+          <Heading :headingContent="heading" :size="headingSize" class="about__heading" />
+          <TextBlock  :textContent="text" class="about__text"/>
+        </div>
+        <div class="about__content--btnBlock">
+          <AboutButton :buttonText="button" class="about__button btn secondary"/>
+        </div>
       </div>
     </div>
+
+    <div class="about__desktopLayout">
+      <!-- <AboutImage class="about__image--headerImage"/> -->
+      <div class="about__inlineImage">
+        <img style="width: 100%;" src="https://via.placeholder.com/250x250" alt="">
+      </div>
+      <div class="about__content">
+        <div class="about__content--textContent">
+          <Heading :headingContent="heading" :size="headingSize" class="about__heading" />
+          <TextBlock  :textContent="text" class="about__text"/>
+        </div>
+        <div class="about__content--btnBlock">
+          <AboutButton :buttonText="button" class="about__button btn secondary"/>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -46,38 +65,101 @@ export default {
   background: $brown;
 }
 
-.about__image {
-  width: 100%;
-  height: auto;
+.about__mobileLayout {
+  .about__image {
+    width: 100%;
+    height: auto;
 
+  }
+
+  .about__content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .about__heading,
+  .about__text {
+    color: #fff;
+  }
+
+
+
+  .about__content--btnBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__button {
+    margin: 0 auto;
+    background: $tan;
+    color: #fff;
+    margin-top: 20px;
+  }
 }
 
-.about__content {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 25px;
-  padding-bottom: 50px;
+.about__desktopLayout {
+  .about__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about__inlineImage {
+    width: auto;
+    height: 596px
+  }
+
+  .about__content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__content--textContent {
+    width: 50%;
+  }
+
+  .about__heading,
+  .about__text {
+    color: #fff;
+  }
+
+  .about__content--btnBlock {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__button {
+    margin: 100px auto 0;
+    background: $tan;
+    color: #fff;
+    margin-top: 20px;
+  }
 }
 
-.about__heading,
-.about__text {
-  color: #fff;
+
+
+.about__mobileLayout {
+  display: block;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
 }
 
-
-
-.about__content--btnBlock {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about__button {
-  margin: 0 auto;
-  background: $tan;
-  color: #fff;
-  margin-top: 20px;
+.about__desktopLayout {
+  display: none;
+  @include for-tablet-landscape-up {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 </style>

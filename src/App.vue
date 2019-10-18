@@ -12,6 +12,7 @@
     <Blogs/>
     <Instagram/>
     <Footer/>
+    <CopyBar />
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import Testimonials from './components/layout/Testimonials.vue'
 import Blogs from './components/layout/Blogs.vue'
 import Instagram from './components/layout/Instagram.vue'
 import Footer from './components/layout/Footer.vue'
+import CopyBar from './components/layout/CopyBar.vue'
 
 export default {
   name: 'app',
@@ -43,7 +45,8 @@ export default {
     Testimonials,
     Blogs,
     Instagram,
-    Footer
+    Footer,
+    CopyBar
   }
 }
 </script>

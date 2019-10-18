@@ -1,5 +1,5 @@
 <template lang="html">
-  <img :src="imgUrl" alt="">
+  <img src="https://via.placeholder.com/250x250" alt="">
 </template>
 
 <script>

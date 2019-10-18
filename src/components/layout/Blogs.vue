@@ -1,9 +1,13 @@
 <template lang="html">
   <div class="blogs">
-    <BlogsHeading :headingContent="heading" class="blogs__heading"/>
-    <BlogPost v-for="(blog, index) in blogPosts" :topic="blog.topic" :title="blog.title" :image="blog.image" :key="index" class="blogs__post"/>
-    <div class="blogs__buttonBlock">
-      <BlogsButton :buttonText="btnText" buttonClass="btnMd secondary" class="blogs__button"/>
+    <div class="blogs__contentWrapper">
+      <BlogsHeading :headingContent="heading" class="blogs__heading"/>
+      <div class="blogs__postWrapper">
+        <BlogPost v-for="(blog, index) in blogPosts" :topic="blog.topic" :title="blog.title" :image="blog.image" :key="index" class="blogs__post"/>
+      </div>
+      <div class="blogs__buttonBlock">
+        <BlogsButton :buttonText="btnText" buttonClass="btnMd secondary" class="blogs__button"/>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +45,12 @@ export default {
   padding-top: 25px;
 }
 
+.blogs__contentWrapper {
+  @include for-tablet-landscape-up {
+    width: calc(100% - 180px);
+    margin: 0 auto;
+  }
+}
 .blogs__heading {
   color: $brown;
   font-weight: 400;
@@ -63,5 +73,11 @@ export default {
   margin: 0 auto;
 }
 
-
+.blogs__postWrapper {
+  @include for-tablet-landscape-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
 </style>

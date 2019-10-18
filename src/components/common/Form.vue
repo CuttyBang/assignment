@@ -54,6 +54,12 @@ export default {
     border: 1px solid #C9BE9E;
     height: 44px
   }
+
+  @include for-tablet-landscape-up {
+    &__header {
+      text-align: left;
+    }
+  }
 }
 
 

@@ -2,13 +2,13 @@
   <div class="hero">
 
     <div class="hero__desktopContent">
-      <div class="hero__headlineBlock">
+      <div class="hero__contentBlock">
         <HeadingText :headingContent="heading" class="hero__headline h1"></HeadingText>
         <div class="hero__textBlock">
           <TextBlock :textContent="text" class="hero__text"/>
         </div>
         <div class="hero__buttonBlock">
-          <Btn v-for="(button, index) in buttons" :buttonText="button" class="hero__button" :key="index"></Btn>
+          <Btn v-for="(button, index) in buttons" :buttonText="button" class="hero__button btn" :key="index"></Btn>
         </div>
       </div>
     </div>
@@ -85,25 +85,62 @@ export default {
 .hero__desktopContent {
   display: none;
   @include for-tablet-landscape-up {
+    display: flex;
     background: url('../../assets/hero.jpg');
     background-size: cover;
-    display: block;
+    height: 670px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero__contentBlock {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero__headline {
+    width: 50%
+  }
+
+  .hero__text {
+    width: 50%;
+  }
+
+  .hero__buttonBlock {
+    position: absolute;
+    bottom: 25px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .hero__button {
+    @include for-tablet-landscape-up {
+      width: 200px;
+    }
+    @include for-desktop-up {
+      width: 248px;
+    }
   }
 }
 
 .hero__mobileContent {
   display: block;
 
+
   .hero__mobileContent--top {
     height: 385px;
     width: 100%;
     background: url('../../assets/hero_mobile.jpg');
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: auto;
+    background-position: center;
+    background-size: 100vw auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
   .hero__headlineBlock {
@@ -118,6 +155,12 @@ export default {
     text-align: center;
   }
 
+  .hero__textBlock {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   .hero__text {
     font-size: 17px;
     color: $brown;
@@ -127,7 +170,6 @@ export default {
   .hero__mobileContent--bottom {
      width: calc(100% - 40px);
      margin: 0 auto;
-
     .hero__textBlock {
        margin-bottom: 20px;
     }
@@ -138,9 +180,19 @@ export default {
       line-height: 1.4;
     }
 
+    .hero__buttonBlock {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+
     .hero__button {
       width: 335px;
       margin-top: 20px;
+
     }
   }
 

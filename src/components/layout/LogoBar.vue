@@ -3,10 +3,10 @@
     <Headline :headingContent="headlineText" :size="headlineType" class="logobar__heading"/>
     <!-- <Logo v-for="(logo, index) in logos" :imgSrc="logo" :key="index" class="logobar__logo"/> -->
     <div class="logobar__logos">
-      <img class="logobar__logo" src="../../assets/_nytimes2.png" alt="">
+      <img class="logobar__logo" src="../../assets/_nytimes3.png" alt="">
       <img class="logobar__logo" src="../../assets/_allure.png" alt="">
       <img class="logobar__logo" src="../../assets/_goop.png" alt="">
-      <img class="logobar__logo" src="../../assets/_wallpaper2.png" alt="">
+      <img class="logobar__logo" src="../../assets/_wallpaper.png" alt="">
     </div>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
   border-bottom: 1px solid $blue;
   @include for-tablet-landscape-up {
     height: 225px;
+
   }
 }
 
@@ -49,6 +50,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
   @include for-tablet-landscape-up {
     width: 80%;
     margin: 0 auto;
@@ -66,6 +72,9 @@ export default {
   margin: 10px;
   width: 80%;
   height: auto;
+  @include for-tablet-portrait-up {
+    width: 30%
+  }
   @include for-tablet-landscape-up {
     width: 20%;
   }

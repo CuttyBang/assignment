@@ -37,31 +37,48 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  @include for-desktop-up {
-    flex-direction: row;
-    width: 50%;
+  @include for-tablet-landscape-up {
+    width: 49%;
   }
+
   &__content {
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    @include for-tablet-landscape-up {
+      margin: 0;
+      text-align: left;
+      padding: 0;
+    }
   }
+
   &__text--title, &__text--topic {
     color: $brown;
+  }
+
+  &__text--title {
+    font-weight: 400;
+
+    @include for-tablet-landscape-up {
+      min-height: 75px;
+      margin-bottom: 0;
+    }
   }
 
   &__text--topic {
     font-weight: 100;
   }
+
   &__text--link {
     margin-top: 50px;
     margin-bottom: 52px;
   }
+
   &__text--linkText {
     line-height: 1.5;
     border-bottom: 1px solid $green;
     color: $green;
   }
+
 }
 </style>

@@ -42,7 +42,7 @@ export default {
   align-items: center;
   height: 32px;
   width: 100%;
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     height: 36px;
   }
 }
@@ -73,7 +73,7 @@ export default {
 }
 
 .topbar__text--message {
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     text-align: left;
     width: calc(100vw - 270px;);
     margin-left: 46px;
@@ -84,7 +84,7 @@ export default {
   width: 270;
   height: 100%;
   display: none;
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     display: flex;
     justify-content: space-around;
     align-items: center;
